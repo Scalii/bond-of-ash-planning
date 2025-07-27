@@ -78,6 +78,14 @@ body {
   flex-direction: column;
 }
 
+/* Allow certain containers to span full width */
+.full-board-container {
+  max-width: none;
+  width: calc(100% - 2rem);
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .logo {
   font-size: 1.3rem;
   font-weight: bold;
@@ -313,6 +321,13 @@ body {
   gap: 0.8rem;
 }
 
+/* Center and constrain width of the systems accordion */
+.accordion-wrapper {
+  max-width: 650px;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .accordion-item {
   background: linear-gradient(135deg, #161b22, #0e131a);
   border-radius: var(--radius);
@@ -401,7 +416,7 @@ section.accordion p {
 
 .kanban-board {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1rem;
 }
 
