@@ -1,17 +1,41 @@
-/*
- * Simple JavaScript to power the collapsible sections. It attaches click
- * handlers to each section header and toggles an `.open` class on the parent
- * element. The CSS uses this class to show or hide the section content and
- * rotate the toggle icon.
- */
+// Toggle system sections open/closed
+ document.addEventListener('DOMContentLoaded', () => {
+   const systemSections = document.querySelectorAll('.system-section');
+   systemSections.forEach(section => {
+     const header = section.querySelector('.section-header');
+     header.addEventListener('click', () => {
+       section.classList.toggle('open');
+     });
+   });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const sections = document.querySelectorAll('.system-section');
-  sections.forEach(section => {
-    const header = section.querySelector('.section-header');
-    header.addEventListener('click', () => {
-      // Toggle the 'open' class on the section to show/hide details
-      section.classList.toggle('open');
-    });
-  });
-});
+   // Kanban drag-and-drop
+   const tasks = document.querySelectorAll('.kanban-task');
+   const columns = document.querySelectorAll('.kanban-column');
+
+   tasks.forEach(task => {
+     task.addEventListener('dragstart', dragStart);
+   });
+
+   columns.forEach(col => {
+     col.addEventListener('dragover', dragOver);
+     col.addEventListener('drop', dropTask);
+   });
+
+   function dragStart(e) {
+     e.dataTransfer.setData('text/plain', e.target.id);
+     // add class to highlight dragging if desired
+   }
+
+   function dragOver(e) {
+     e.preventDefault();
+   }
+
+   function dropTask(e) {
+     e.preventDefault();
+     const id = e.dataTransfer.getData('text/plain');
+     const task = document.getElementById(id);
+     if (task) {
+       this.appendChild(task);
+     }
+   }
+ });
