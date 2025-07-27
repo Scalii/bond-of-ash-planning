@@ -1,282 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bond of Ash – Technical Roadmap</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bond of Ash – Development Roadmap</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Bond of Ash</h1>
-    <p class="subtitle">Interactive Development Portal</p>
-  </header>
-
-  <!-- Navigation bar with section links -->
-  <nav class="navbar">
-    <ul>
-      <li><a href="#systems">Systems</a></li>
-      <li><a href="#roadmap">Roadmap</a></li>
-      <li><a href="#kanban">Kanban Board</a></li>
+  <nav>
+    <div class="logo">Bond of Ash</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Roadmap</a></li>
+      <li><a href="functions.html">Systems</a></li>
+      <li><a href="board.html">Kanban</a></li>
     </ul>
   </nav>
-
-  <main>
-    <!-- Technical Systems section (existing collapsible cards) -->
-    <section id="systems" class="systems-section">
-      <h2>Technical Systems Overview</h2>
-      <p class="section-intro">This section outlines the major gameplay and engine systems for Bond of Ash. Click on each card to expand details.</p>
-      <!-- Include collapsible system cards -->
-      <div class="systems-cards">
-        <!-- Inventory -->
-        <div class="system-section">
-          <div class="section-header"><h3>Inventory System</h3><span class="toggle-icon">+</span></div>
-          <div class="section-content">
-            <p class="description">Manage items, equipment and resources. Support stacking, slots, crafting inputs and replication.</p>
-            <ul class="tasks">
-              <li>Define item data structures and custom GameInstance array</li>
-              <li>Implement pickup and use logic via base classes</li>
-              <li>Design and implement inventory UI (grid/list &amp; quick bar)</li>
-              <li>Add network replication for inventory</li>
-              <li>Integrate saving/loading of inventory data</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Ability System -->
-        <div class="system-section">
-          <div class="section-header"><h3>Ability System &amp; Skill Tree</h3><span class="toggle-icon">+</span></div>
-          <div class="section-content">
-            <p class="description">Implement abilities, attributes and effects using GAS. Provide a skill tree for progression.</p>
-            <ul class="tasks">
-              <li>Enable Gameplay Ability System plugin and configure dependencies</li>
-              <li>Design Attribute Sets (health, stamina, dragon bond, etc.)</li>
-              <li>Create base Gameplay Abilities (movement, combat, dragon abilities)</li>
-              <li>Implement Gameplay Effects (buffs, debuffs, cooldowns)</li>
-              <li>Design and implement skill tree UI and logic</li>
-              <li>Implement replication of abilities for co‑op</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Dragon Companion -->
-        <div class="system-section">
-          <div class="section-header"><h3>Dragon Companion System</h3><span class="toggle-icon">+</span></div>
-          <div class="section-content">
-            <p class="description">Grow your baby dragon: AI behaviours, bonding, ability progression and co‑op sync.</p>
-            <ul class="tasks">
-              <li>Create dragon AI controller and behaviour tree (follow, hide, rest)</li>
-              <li>Implement bonding system based on player actions and proximity</li>
-              <li>Develop dragon ability progression integrated with GAS</li>
-              <li>Design dragon interaction UI (status, commands)</li>
-              <li>Set up replication and save/load for dragon state</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Co-op Networking -->
-        <div class="system-section">
-          <div class="section-header"><h3>Co‑op Networking</h3><span class="toggle-icon">+</span></div>
-          <div class="section-content">
-            <p class="description">Enable multiplayer: sessions, replication and RPCs for all systems.</p>
-            <ul class="tasks">
-              <li>Configure Online Subsystem and session management</li>
-              <li>Set up actor/component replication for core systems</li>
-              <li>Implement Remote Procedure Calls (RPCs) for gameplay events</li>
-              <li>Test co‑op flow (joining, leaving, reconnection)</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Quest & Mission System -->
-        <div class="system-section">
-          <div class="section-header"><h3>Quest &amp; Mission System</h3><span class="toggle-icon">+</span></div>
-          <div class="section-content">
-            <p class="description">Create story and side missions with mission manager and task objects; track progress and trigger events.</p>
-            <ul class="tasks">
-              <li>Design Mission Manager blueprint with an array of missions</li>
-              <li>Create base Mission class with start and completion events</li>
-              <li>Develop mission tasks and conditions</li>
-              <li>Integrate mission triggers into world (volumes, dialogues)</li>
-              <li>Implement mission replication and saving</li>
-            </ul>
-          </div>
-        </div>
-        <!-- AI & Enemies -->
-        <div class="system-section">
-          <div class="section-header"><h3>AI &amp; Enemies</h3><span class="toggle-icon">+</span></div>
-          <div class="section-content">
-            <p class="description">Create AI for cultists and enemies with patrol, detection and combat behaviours.</p>
-            <ul class="tasks">
-              <li>Set up AI Controller and Behavior Tree for cultists</li>
-              <li>Implement perception components (sight, hearing)</li>
-              <li>Develop combat behaviours and animations</li>
-              <li>Integrate enemy abilities with GAS</li>
-              <li>Implement replication for enemy AI</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Save/Load System -->
-        <div class="system-section">
-          <div class="section-header"><h3>Save/Load System</h3><span class="toggle-icon">+</span></div>
-          <div class="section-content">
-            <p class="description">Persist data for inventory, missions, dragon state and world changes using SaveGame objects.</p>
-            <ul class="tasks">
-              <li>Create SaveGame blueprint and define storage variables</li>
-              <li>Implement logic to create or load SaveGame at game start</li>
-              <li>Write functions to read/write data to SaveGame</li>
-              <li>Integrate saving/loading with inventory, missions, dragon and world</li>
-              <li>Provide UI for save slots and player choice</li>
-            </ul>
-          </div>
-        </div>
-        <!-- UI & Interaction -->
-        <div class="system-section">
-          <div class="section-header"><h3>UI &amp; Interaction</h3><span class="toggle-icon">+</span></div>
-          <div class="section-content">
-            <p class="description">Design and implement all interfaces: HUD, menus, inventory, dialogue, skill tree and dragon status.</p>
-            <ul class="tasks">
-              <li>Design HUD elements (health, stamina, bond meters)</li>
-              <li>Develop inventory UI and interaction panels</li>
-              <li>Create quest log and mission tracking UI</li>
-              <li>Implement dialogue interface with branching choices</li>
-              <li>Build skill tree and ability selection UI</li>
-              <li>Add dragon status and command interface</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Open World & Streaming -->
-        <div class="system-section">
-          <div class="section-header"><h3>Open World &amp; Streaming</h3><span class="toggle-icon">+</span></div>
-          <div class="section-content">
-            <p class="description">Construct an open world environment and manage it with world partition, level streaming and performance optimisation.</p>
-            <ul class="tasks">
-              <li>Design world layout and identify major zones</li>
-              <li>Set up world partition or level streaming</li>
-              <li>Implement dynamic day/night and weather system</li>
-              <li>Add environmental interaction and destructible objects</li>
-              <li>Optimise LODs, culling and performance</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Audio & VFX -->
-        <div class="system-section">
-          <div class="section-header"><h3>Audio &amp; VFX</h3><span class="toggle-icon">+</span></div>
-          <div class="section-content">
-            <p class="description">Create immersive audio and visual effects: ambient sounds, voice overs, particle effects and dynamic music.</p>
-            <ul class="tasks">
-              <li>Compose or source ambient soundscapes</li>
-              <li>Implement sound cues and volumes for abilities and events</li>
-              <li>Create particle effects for fire, ash, magic and dragon abilities</li>
-              <li>Integrate dynamic music system that responds to gameplay</li>
-              <li>Optimise audio and VFX performance</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Vehicles -->
-        <div class="system-section">
-          <div class="section-header"><h3>Driveable Vehicles</h3><span class="toggle-icon">+</span></div>
-          <div class="section-content">
-            <p class="description">Implement drivable vehicles such as cars or carts using Unreal’s vehicle systems and ensure co‑op replication.</p>
-            <ul class="tasks">
-              <li>Enable vehicle physics or Chaos Vehicles plugin</li>
-              <li>Create base vehicle class with physics, steering and throttle control</li>
-              <li>Implement driving input mappings (accelerate, brake, steering)</li>
-              <li>Design multiple vehicle types with different stats</li>
-              <li>Integrate vehicles into the open world (roads, spawn points)</li>
-              <li>Implement network replication for vehicle movement and state</li>
-              <li>Add vehicle damage and repair mechanics</li>
-              <li>Provide UI elements (speedometer, fuel gauge)</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Weapons -->
-        <div class="system-section">
-          <div class="section-header"><h3>Weapon System</h3><span class="toggle-icon">+</span></div>
-          <div class="section-content">
-            <p class="description">Develop a firearm system with guns, ammunition, attachments and combat mechanics.</p>
-            <ul class="tasks">
-              <li>Define base weapon classes (pistol, rifle, shotgun)</li>
-              <li>Implement shooting mechanics (hitscan/projectile, spread, recoil)</li>
-              <li>Add ammunition system and reload mechanics</li>
-              <li>Create attachments and weapon customisation</li>
-              <li>Integrate weapons into inventory and equipping system</li>
-              <li>Add visual and audio effects (muzzle flash, gunshot sounds)</li>
-              <li>Implement network replication for weapon state and firing events</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Crafting & Shelters -->
-        <div class="system-section">
-          <div class="section-header"><h3>Crafting &amp; Shelter Construction</h3><span class="toggle-icon">+</span></div>
-          <div class="section-content">
-            <p class="description">Allow players to gather resources, craft items and build shelters for survival.</p>
-            <ul class="tasks">
-              <li>Design resource types and harvesting mechanics</li>
-              <li>Implement crafting system with recipes and output items</li>
-              <li>Create crafting UI and feedback</li>
-              <li>Design buildable shelter structures with modular pieces</li>
-              <li>Implement placement system for structures</li>
-              <li>Add upgrade and repair mechanics for shelters</li>
-              <li>Integrate shelters and crafted items into Save/Load system</li>
-              <li>Tie advanced recipes and shelter upgrades into the skill tree</li>
-            </ul>
-          </div>
+  <header class="hero">
+    <h1>Development Roadmap</h1>
+    <p>Follow the journey from concept to finished game.</p>
+  </header>
+  <main class="container">
+    <section class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-icon">1</div>
+        <div class="timeline-content">
+          <h2>Core Setup</h2>
+          <p>Establish the project structure, set up version control, and integrate Unreal Engine plugins (Online Subsystem, GAS, FMOD).</p>
         </div>
       </div>
-    </section>
-
-    <!-- Roadmap section -->
-    <section id="roadmap" class="roadmap-section">
-      <h2>Development Roadmap</h2>
-      <p class="section-intro">This roadmap outlines the recommended order for building the game. Each phase depends on the foundation laid by the previous one.</p>
-      <ol class="roadmap-list">
-        <li><strong>Core Setup:</strong> Set up project structure, version control, Online Subsystem, and essential plugins.</li>
-        <li><strong>World Building:</strong> Design and build the open world layout, implement world partition and streaming, and set up dynamic day/night and weather.</li>
-        <li><strong>Core Systems:</strong> Implement Inventory, Ability &amp; Skill Tree, Dragon Companion and Co‑op Networking.</li>
-        <li><strong>Gameplay Systems:</strong> Create the Mission/Quest System, AI &amp; Enemies, Save/Load functionality, and initial UI & Interaction.</li>
-        <li><strong>Advanced Features:</strong> Add Driveable Vehicles, Weapon System, Crafting &amp; Shelter Construction.</li>
-        <li><strong>Polish &amp; Optimisation:</strong> Integrate Audio &amp; VFX, optimise performance, and refine gameplay based on testing.</li>
-      </ol>
-    </section>
-
-    <!-- Kanban Board section -->
-    <section id="kanban" class="kanban-section">
-      <h2>Interactive Kanban Board</h2>
-      <p class="section-intro">Drag tasks between columns to organise your workflow. Use this board to track progress and collaborate with your team.</p>
-      <div class="kanban-board">
-        <div class="kanban-column" id="todo">
-          <h3>To Do</h3>
-          <div class="kanban-task" id="task1" draggable="true">Inventory System</div>
-          <div class="kanban-task" id="task2" draggable="true">Ability System &amp; Skill Tree</div>
-          <div class="kanban-task" id="task3" draggable="true">Dragon Companion</div>
-          <div class="kanban-task" id="task4" draggable="true">Co‑op Networking</div>
-          <div class="kanban-task" id="task5" draggable="true">Missions &amp; Quests</div>
-          <div class="kanban-task" id="task6" draggable="true">AI &amp; Enemies</div>
-          <div class="kanban-task" id="task7" draggable="true">Save/Load System</div>
-          <div class="kanban-task" id="task8" draggable="true">UI &amp; Interaction</div>
-          <div class="kanban-task" id="task9" draggable="true">Open World &amp; Streaming</div>
-          <div class="kanban-task" id="task10" draggable="true">Audio &amp; VFX</div>
-          <div class="kanban-task" id="task11" draggable="true">Vehicles</div>
-          <div class="kanban-task" id="task12" draggable="true">Weapon System</div>
-          <div class="kanban-task" id="task13" draggable="true">Crafting &amp; Shelters</div>
+      <div class="timeline-item">
+        <div class="timeline-icon">2</div>
+        <div class="timeline-content">
+          <h2>World Building</h2>
+          <p>Design the open world layout, implement world partition and level streaming, and set up dynamic day/night and weather systems.</p>
         </div>
-        <div class="kanban-column" id="in-progress">
-          <h3>In Progress</h3>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-icon">3</div>
+        <div class="timeline-content">
+          <h2>Core Systems</h2>
+          <p>Implement the inventory, ability &amp; skill tree, dragon companion, and networking. Focus on core mechanics with placeholders for art.</p>
         </div>
-        <div class="kanban-column" id="in-discussion">
-          <h3>In Discussion</h3>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-icon">4</div>
+        <div class="timeline-content">
+          <h2>Gameplay Systems</h2>
+          <p>Develop the mission/quest manager, AI and enemies, save/load functionality, and initial UI &amp; interaction.</p>
         </div>
-        <div class="kanban-column" id="done">
-          <h3>Done</h3>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-icon">5</div>
+        <div class="timeline-content">
+          <h2>Advanced Features</h2>
+          <p>Add drivable vehicles, weapon system, crafting and shelter construction. Polish the dragon companion’s growth and behaviours.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-icon">6</div>
+        <div class="timeline-content">
+          <h2>Polish &amp; Optimisation</h2>
+          <p>Integrate audio &amp; VFX, optimise performance, fix bugs, and refine gameplay based on playtesting feedback.</p>
         </div>
       </div>
     </section>
   </main>
-
   <footer>
-    <p>&copy; Bond of Ash – Development Portal</p>
+    <p>&copy; 2025 Bond of Ash Project</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>

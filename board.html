@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bond of Ash – Kanban Board</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <div class="logo">Bond of Ash</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Roadmap</a></li>
+      <li><a href="functions.html">Systems</a></li>
+      <li><a href="board.html" class="active">Kanban</a></li>
+    </ul>
+  </nav>
+  <header class="hero">
+    <h1>Interactive Kanban Board</h1>
+    <p>Organise your workflow by dragging cards between columns. Data is saved in your browser.</p>
+  </header>
+  <main class="container">
+    <div class="board-controls">
+      <input type="text" id="new-task-input" placeholder="New task name" />
+      <button id="add-task-btn">Add Task</button>
+    </div>
+    <div class="kanban-board">
+      <div class="kanban-column" data-column="todo">
+        <h2>To Do</h2>
+        <div class="kanban-list" id="todo-list"></div>
+      </div>
+      <div class="kanban-column" data-column="inprogress">
+        <h2>In Progress</h2>
+        <div class="kanban-list" id="inprogress-list"></div>
+      </div>
+      <div class="kanban-column" data-column="discussion">
+        <h2>In Discussion</h2>
+        <div class="kanban-list" id="discussion-list"></div>
+      </div>
+      <div class="kanban-column" data-column="done">
+        <h2>Done</h2>
+        <div class="kanban-list" id="done-list"></div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Bond of Ash Project</p>
+  </footer>
+  <script src="board.js"></script>
+</body>
+</html>
