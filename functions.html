@@ -22,64 +22,91 @@
       <p>Discover the core mechanics and what each one brings to the game.</p>
     </header>
     <main class="container">
-      <section class="accordion">
-      <details>
-        <summary>Inventory System</summary>
-        <p>Stores items collected by players using arrays or a data table. Includes equipment slots, quick-access bar, sorting filters, and sync across multiplayer sessions.</p>
-      </details>
-      <details>
-        <summary>Ability System &amp; Skill Tree</summary>
-        <p>Employ Unreal’s Gameplay Ability System (GAS) to handle abilities, attributes, cooldowns, and statuses. Create a skill tree that players unlock over time, connecting to character progression and the dragon’s growth.</p>
-      </details>
-      <details>
-        <summary>Dragon Companion</summary>
-        <p>Implement an AI-driven companion that hatches from an egg and evolves as the story progresses. Manage hunger, fear, and bonding mechanics. Integrate with the ability system for dragon attacks and defenses.</p>
-      </details>
-      <details>
-        <summary>Co‑op Networking</summary>
-        <p>Use Unreal’s built-in multiplayer and session management to allow drop-in/out co‑op. Replicate inventory, abilities, and quests. Implement voice chat and emotes for communication.</p>
-      </details>
-      <details>
-        <summary>Missions &amp; Quests</summary>
-        <p>Create a mission manager that tracks objectives, progress, and rewards. Support branching dialogues and consequences. Integrate with save/load and UI so quests persist across sessions.</p>
-      </details>
-      <details>
-        <summary>AI &amp; Enemies</summary>
-        <p>Design enemy behaviour trees, perception, combat AI, and pathfinding. Include different enemy types such as cultists, creatures of the ashlands, and mini‑bosses.</p>
-      </details>
-      <details>
-        <summary>Save/Load System</summary>
-        <p>Utilise Unreal’s SaveGame system to persist player progress, inventory, quests, and world state. Implement auto‑save checkpoints and manual saving.</p>
-      </details>
-      <details>
-        <summary>UI &amp; Interaction</summary>
-        <p>Design intuitive menus, HUD, and dialogue boxes using UMG. Support gamepad and keyboard/mouse controls. Provide visual feedback for items, interactions, and abilities.</p>
-      </details>
-      <details>
-        <summary>Open World &amp; Streaming</summary>
-        <p>Partition the world into streaming levels, load/unload zones seamlessly, and handle player respawn locations. Implement day/night cycles and environmental events.</p>
-      </details>
-      <details>
-        <summary>Audio &amp; VFX</summary>
-        <p>Integrate a sound system (FMOD or Wwise), create ambient soundscapes, and design particle effects for spells, dragon fire, weather, and explosions.</p>
-      </details>
-      <details>
-        <summary>Vehicles</summary>
-        <p>Add drivable carts or vehicles for faster travel. Handle vehicle physics, collisions, and player interactions. Include upgradeable mounts later.</p>
-      </details>
-      <details>
-        <summary>Weapon System</summary>
-        <p>Create melee and ranged weapons with different stats, upgrades, and combos. Integrate with the ability system for special attacks and weapon abilities.</p>
-      </details>
-      <details>
-        <summary>Crafting &amp; Shelters</summary>
-        <p>Allow players to collect resources and craft gear, potions, and shelters. Introduce a base‑building mechanic where they construct camps, upgrade structures, and manage resources.</p>
-      </details>
-      </section>
+    <div class="accordion" id="systemsAccordion">
+      <div class="accordion-item">
+        <button class="accordion-header">Inventory System</button>
+        <div class="accordion-content">
+          <p>Stores items collected by players using arrays or a data table. Includes equipment slots, quick-access bar, sorting filters, and sync across multiplayer sessions.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">Ability System &amp; Skill Tree</button>
+        <div class="accordion-content">
+          <p>Employ Unreal’s Gameplay Ability System (GAS) to handle abilities, attributes, cooldowns, and statuses. Create a skill tree that players unlock over time, connecting to character progression and the dragon’s growth.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">Dragon Companion</button>
+        <div class="accordion-content">
+          <p>Implement an AI-driven companion that hatches from an egg and evolves as the story progresses. Manage hunger, fear, and bonding mechanics. Integrate with the ability system for dragon attacks and defenses.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">Co‑op Networking</button>
+        <div class="accordion-content">
+          <p>Use Unreal’s built-in multiplayer and session management to allow drop-in/out co‑op. Replicate inventory, abilities, and quests. Implement voice chat and emotes for communication.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">Missions &amp; Quests</button>
+        <div class="accordion-content">
+          <p>Create a mission manager that tracks objectives, progress, and rewards. Support branching dialogues and consequences. Integrate with save/load and UI so quests persist across sessions.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">AI &amp; Enemies</button>
+        <div class="accordion-content">
+          <p>Design enemy behaviour trees, perception, combat AI, and pathfinding. Include different enemy types such as cultists, creatures of the ashlands, and mini‑bosses.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">Save/Load System</button>
+        <div class="accordion-content">
+          <p>Utilise Unreal’s SaveGame system to persist player progress, inventory, quests, and world state. Implement auto‑save checkpoints and manual saving.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">UI &amp; Interaction</button>
+        <div class="accordion-content">
+          <p>Design intuitive menus, HUD, and dialogue boxes using UMG. Support gamepad and keyboard/mouse controls. Provide visual feedback for items, interactions, and abilities.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">Open World &amp; Streaming</button>
+        <div class="accordion-content">
+          <p>Partition the world into streaming levels, load/unload zones seamlessly, and handle player respawn locations. Implement day/night cycles and environmental events.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">Audio &amp; VFX</button>
+        <div class="accordion-content">
+          <p>Integrate a sound system (FMOD or Wwise), create ambient soundscapes, and design particle effects for spells, dragon fire, weather, and explosions.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">Vehicles</button>
+        <div class="accordion-content">
+          <p>Add drivable carts or vehicles for faster travel. Handle vehicle physics, collisions, and player interactions. Include upgradeable mounts later.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">Weapon System</button>
+        <div class="accordion-content">
+          <p>Create melee and ranged weapons with different stats, upgrades, and combos. Integrate with the ability system for special attacks and weapon abilities.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">Crafting &amp; Shelters</button>
+        <div class="accordion-content">
+          <p>Allow players to collect resources and craft gear, potions, and shelters. Introduce a base‑building mechanic where they construct camps, upgrade structures, and manage resources.</p>
+        </div>
+      </div>
+    </div>
     </main>
     <footer>
       <p>&copy; 2025 Bond of Ash Project</p>
     </footer>
   </div>
+  <script src="accordion.js"></script>
 </body>
 </html>
