@@ -73,11 +73,20 @@ function setupDragAndDrop() {
   });
 
   document.querySelectorAll('.kanban-list').forEach(list => {
+    const column = list.parentElement;
+    list.addEventListener('dragenter', e => {
+      e.preventDefault();
+      column.classList.add('drag-over');
+    });
     list.addEventListener('dragover', e => {
       e.preventDefault();
     });
+    list.addEventListener('dragleave', e => {
+      column.classList.remove('drag-over');
+    });
     list.addEventListener('drop', e => {
       e.preventDefault();
+      column.classList.remove('drag-over');
       if (dragged) {
         list.appendChild(dragged);
         const tasks = loadTasks();
