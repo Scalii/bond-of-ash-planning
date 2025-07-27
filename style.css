@@ -1,25 +1,189 @@
-body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f6fb; color: #283547; }
-header { background-color: #2a3b6e; color: #fff; padding: 20px; text-align: center; }
-header h1 { margin: 0; font-size: 32px; }
-header .tagline { margin-top: 5px; font-size: 14px; color: #d0d8ee; }
-#top-nav { background-color: #fff; border-bottom: 1px solid #dce3f0; position: sticky; top: 0; z-index: 100; padding: 10px 20px; }
-#top-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; }
-#top-nav li { margin-right: 15px; }
-#top-nav a { text-decoration: none; color: #2a3b6e; font-weight: 600; padding: 6px 10px; border-radius: 4px; }
-#top-nav a:hover { background-color: #e5ecfa; }
-#menu-toggle { display: none; }
-main { padding: 20px; max-width: 960px; margin: auto; }
-.system-section { background-color: #fff; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.06); }
-.system-section h2 { margin-top: 0; color: #2a3b6e; border-left: 4px solid #2a3b6e; padding-left: 8px; }
-.system-section p { margin-bottom: 12px; }
-.task-list { list-style: none; padding-left: 0; }
-.task-list li { position: relative; padding-left: 24px; margin-bottom: 8px; line-height: 1.4; }
-.task-list li:before { content: '2'; position: absolute; left: 0; top: 0; color: #f46f20; font-size: 18px; }
-footer { background-color: #2a3b6e; color: #fff; text-align: center; padding: 10px 20px; margin-top: 40px; }
-/* Responsive menu for small screens */
-@media (max-width: 600px) {
-  #top-nav ul { display: none; flex-direction: column; margin-top: 10px; }
-  #top-nav ul.show { display: flex; }
-  #menu-toggle { display: inline-block; background: none; border: none; color: #2a3b6e; font-size: 24px; cursor: pointer; }
-  #top-nav li { margin: 5px 0; }
+/*
+ * Stylesheet for the Bond of Ash interactive roadmap. This theme uses a dark
+ * background with contrasting accent colours and smooth transitions. The
+ * collapsible cards provide a clean way to explore detailed tasks without
+ * overwhelming the reader.
+ */
+
+/* Global reset and base typography */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+/* Header styling */
+header {
+  text-align: center;
+  padding: 2.5rem 1rem 1rem;
+  background: linear-gradient(135deg, #1e1e1e 0%, #2b2b2b 100%);
+  border-bottom: 1px solid #333;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #ffa726;
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #bdbdbd;
+  letter-spacing: 0.5px;
+}
+
+/* Navigation bar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #1f1f1f;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.navbar ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0.75rem 1rem;
+}
+
+.navbar a {
+  color: #e0e0e0;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.navbar a:hover {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+/* Container for the system sections */
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Individual collapsible sections */
+.system-section {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.system-section:hover {
+  background-color: #242424;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.section-header h2 {
+  font-size: 1.25rem;
+  color: #ffca28;
+}
+
+.toggle-icon {
+  font-size: 1.5rem;
+  color: #ffca28;
+  transition: transform 0.3s ease;
+}
+
+.system-section.open .toggle-icon {
+  transform: rotate(45deg);
+}
+
+/* Content hidden by default; revealed when the parent has class .open */
+.section-content {
+  display: none;
+  padding: 0 1.25rem 1.5rem;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.system-section.open .section-content {
+  display: block;
+}
+
+.description {
+  margin: 0.5rem 0 0.75rem;
+  color: #b0b0b0;
+}
+
+.tasks {
+  list-style: disc inside;
+  margin-left: 1rem;
+}
+
+.tasks li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+/* Footer styling */
+footer {
+  background-color: #1f1f1f;
+  color: #757575;
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid #333;
+  font-size: 0.875rem;
+}
+
+/* Simple fade-in animation for content reveal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design tweaks */
+@media (max-width: 768px) {
+  .navbar ul {
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.1rem;
+  }
+
+  .toggle-icon {
+    font-size: 1.25rem;
+  }
 }

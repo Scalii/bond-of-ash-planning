@@ -1,8 +1,17 @@
-document.getElementById('menu-toggle').addEventListener('click', function() {
-  var list = document.getElementById('nav-list');
-  if (list.classList.contains('show')) {
-    list.classList.remove('show');
-  } else {
-    list.classList.add('show');
-  }
+/*
+ * Simple JavaScript to power the collapsible sections. It attaches click
+ * handlers to each section header and toggles an `.open` class on the parent
+ * element. The CSS uses this class to show or hide the section content and
+ * rotate the toggle icon.
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+  const sections = document.querySelectorAll('.system-section');
+  sections.forEach(section => {
+    const header = section.querySelector('.section-header');
+    header.addEventListener('click', () => {
+      // Toggle the 'open' class on the section to show/hide details
+      section.classList.toggle('open');
+    });
+  });
 });
