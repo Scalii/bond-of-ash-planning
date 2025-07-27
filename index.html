@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav>
+  <nav class="sidebar">
     <div class="logo">Bond of Ash</div>
     <ul class="nav-links">
       <li><a href="index.html" class="active">Home</a></li>
@@ -16,30 +16,41 @@
       <li><a href="board.html">Kanban</a></li>
     </ul>
   </nav>
-  <header class="hero home-hero">
-    <img src="images/baby_dragon_transparent.png" alt="Baby Dragon Logo" class="logo-img" />
-    <h1>Welcome to Bond of Ash</h1>
-    <p>Chart the path of our game’s creation, explore its systems, and collaborate on tasks.</p>
-  </header>
-  <main class="container home-options">
-    <div class="option-card">
-      <h2>Roadmap</h2>
-      <p>See the high‑level plan from concept to completion.</p>
-      <a href="roadmap.html" class="btn">View Roadmap</a>
-    </div>
-    <div class="option-card">
-      <h2>Systems</h2>
-      <p>Learn about the gameplay mechanics and how they interconnect.</p>
-      <a href="functions.html" class="btn">Browse Systems</a>
-    </div>
-    <div class="option-card">
-      <h2>Kanban</h2>
-      <p>Track progress and manage tasks with your team.</p>
-      <a href="board.html" class="btn">Open Kanban</a>
-    </div>
-  </main>
-  <footer>
-    <p>&copy; 2025 Bond of Ash Project</p>
-  </footer>
+  <div class="content">
+    <header class="hero home-hero">
+      <div class="hero-grid">
+        <div class="hero-image-wrapper">
+          <img src="images/baby_dragon_transparent.png" alt="Baby Dragon Logo" class="logo-img" />
+        </div>
+        <div class="hero-text">
+          <h1>Welcome to Bond of Ash</h1>
+          <p>Chart the path of our game’s creation, explore its systems, and collaborate on tasks.</p>
+        </div>
+      </div>
+    </header>
+    <main class="container cards-container">
+      <div class="option-card">
+        <div class="option-icon">🗺️</div>
+        <h2>Roadmap</h2>
+        <p>See the high‑level plan from concept to completion.</p>
+        <a href="roadmap.html" class="btn">View Roadmap</a>
+      </div>
+      <div class="option-card">
+        <div class="option-icon">⚙️</div>
+        <h2>Systems</h2>
+        <p>Learn about the gameplay mechanics and how they interconnect.</p>
+        <a href="functions.html" class="btn">Browse Systems</a>
+      </div>
+      <div class="option-card">
+        <div class="option-icon">📋</div>
+        <h2>Kanban</h2>
+        <p>Track progress and manage tasks with your team.</p>
+        <a href="board.html" class="btn">Open Kanban</a>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2025 Bond of Ash Project</p>
+    </footer>
+  </div>
 </body>
 </html>

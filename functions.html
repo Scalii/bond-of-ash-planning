@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav>
+  <nav class="sidebar">
     <div class="logo">Bond of Ash</div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
@@ -16,12 +16,13 @@
       <li><a href="board.html">Kanban</a></li>
     </ul>
   </nav>
-  <header class="hero">
-    <h1>Systems &amp; Features</h1>
-    <p>Discover the core mechanics and what each one brings to the game.</p>
-  </header>
-  <main class="container">
-    <section class="accordion">
+  <div class="content">
+    <header class="hero">
+      <h1>Systems &amp; Features</h1>
+      <p>Discover the core mechanics and what each one brings to the game.</p>
+    </header>
+    <main class="container">
+      <section class="accordion">
       <details>
         <summary>Inventory System</summary>
         <p>Stores items collected by players using arrays or a data table. Includes equipment slots, quick-access bar, sorting filters, and sync across multiplayer sessions.</p>
@@ -74,10 +75,11 @@
         <summary>Crafting &amp; Shelters</summary>
         <p>Allow players to collect resources and craft gear, potions, and shelters. Introduce a base‑building mechanic where they construct camps, upgrade structures, and manage resources.</p>
       </details>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2025 Bond of Ash Project</p>
-  </footer>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Bond of Ash Project</p>
+    </footer>
+  </div>
 </body>
 </html>
