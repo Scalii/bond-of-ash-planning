@@ -312,6 +312,7 @@ section.accordion details {
   margin-bottom: 0.8rem;
   padding: 0.5rem 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  width: 100%;
 }
 
 section.accordion summary {
@@ -379,9 +380,9 @@ section.accordion p {
 }
 
 .kanban-board {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .kanban-column {
@@ -394,6 +395,7 @@ section.accordion p {
   flex-direction: column;
   border: 1px dashed #2d333b;
   transition: border-color 0.2s;
+  flex: 1 1 250px;
 }
 
 .kanban-column.drag-over {
