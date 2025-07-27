@@ -1,0 +1,25 @@
+body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f6fb; color: #283547; }
+header { background-color: #2a3b6e; color: #fff; padding: 20px; text-align: center; }
+header h1 { margin: 0; font-size: 32px; }
+header .tagline { margin-top: 5px; font-size: 14px; color: #d0d8ee; }
+#top-nav { background-color: #fff; border-bottom: 1px solid #dce3f0; position: sticky; top: 0; z-index: 100; padding: 10px 20px; }
+#top-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; }
+#top-nav li { margin-right: 15px; }
+#top-nav a { text-decoration: none; color: #2a3b6e; font-weight: 600; padding: 6px 10px; border-radius: 4px; }
+#top-nav a:hover { background-color: #e5ecfa; }
+#menu-toggle { display: none; }
+main { padding: 20px; max-width: 960px; margin: auto; }
+.system-section { background-color: #fff; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.06); }
+.system-section h2 { margin-top: 0; color: #2a3b6e; border-left: 4px solid #2a3b6e; padding-left: 8px; }
+.system-section p { margin-bottom: 12px; }
+.task-list { list-style: none; padding-left: 0; }
+.task-list li { position: relative; padding-left: 24px; margin-bottom: 8px; line-height: 1.4; }
+.task-list li:before { content: '2'; position: absolute; left: 0; top: 0; color: #f46f20; font-size: 18px; }
+footer { background-color: #2a3b6e; color: #fff; text-align: center; padding: 10px 20px; margin-top: 40px; }
+/* Responsive menu for small screens */
+@media (max-width: 600px) {
+  #top-nav ul { display: none; flex-direction: column; margin-top: 10px; }
+  #top-nav ul.show { display: flex; }
+  #menu-toggle { display: inline-block; background: none; border: none; color: #2a3b6e; font-size: 24px; cursor: pointer; }
+  #top-nav li { margin: 5px 0; }
+}
