@@ -1,0 +1,151 @@
+https://github.com/Scalii/bond-of-ash-planning/new/main
+ntory data</li>
+</ul>
+</section>
+<section id='ability' class='system-section'>
+<h2>Ability System &amp; Skill Tree</h2>
+<p>Implement abilities, attributes and effects using GAS. Provide a skill tree for progression.</p>
+<ul class='task-list'>
+  <li>Enable Gameplay Ability System plugin and configure dependencies</li>
+  <li>Design Attribute Sets (health, stamina, dragon bond, etc.)</li>
+  <li>Create base Gameplay Abilities (movement, combat, dragon abilities)</li>
+  <li>Implement Gameplay Effects (buffs, debuffs, cooldowns)</li>
+  <li>Design and implement skill tree UI and logic</li>
+  <li>Implement replication of abilities for co‑op</li>
+</ul>
+</section>
+<section id='dragon' class='system-section'>
+<h2>Dragon Companion System</h2>
+<p>Grow your baby dragon: AI behaviours, bonding, ability progression and co‑op sync.</p>
+<ul class='task-list'>
+  <li>Create dragon AI controller and behaviour tree (follow, hide, rest)</li>
+  <li>Implement bonding system based on player actions and proximity</li>
+  <li>Develop dragon ability progression integrated with GAS</li>
+  <li>Design dragon interaction UI (status, commands)</li>
+  <li>Set up replication and save/load for dragon state</li>
+</ul>
+</section>
+<section id='coop' class='system-section'>
+<h2>Co‑op Networking</h2>
+<p>Enable multiplayer: sessions, replication and RPCs for all systems.</p>
+<ul class='task-list'>
+  <li>Configure Online Subsystem and session management</li>
+  <li>Set up actor/component replication for core systems</li>
+  <li>Implement Remote Procedure Calls (RPCs) for gameplay events</li>
+  <li>Test co‑op flow (joining, leaving, reconnection)</li>
+</ul>
+</section>
+<section id='quest' class='system-section'>
+<h2>Quest &amp; Mission System</h2>
+<p>Create story and side missions with mission manager and task objects; track progress and trigger events.</p>
+<ul class='task-list'>
+  <li>Design Mission Manager blueprint with an array of missions</li>
+  <li>Create base Mission class with start and completion events</li>
+  <li>Develop mission tasks and conditions</li>
+  <li>Integrate mission triggers into world (volumes, dialogues)</li>
+  <li>Implement mission replication and saving</li>
+</ul>
+</section>
+<section id='ai' class='system-section'>
+<h2>AI &amp; Enemies</h2>
+<p>Create AI for cultists and enemies with patrol, detection and combat behaviours.</p>
+<ul class='task-list'>
+  <li>Set up AI Controller and Behavior Tree for cultists</li>
+  <li>Implement perception components (sight, hearing)</li>
+  <li>Develop combat behaviours and animations</li>
+  <li>Integrate enemy abilities with GAS</li>
+  <li>Implement replication for enemy AI</li>
+</ul>
+</section>
+<section id='save' class='system-section'>
+<h2>Save/Load System</h2>
+<p>Persist data for inventory, missions, dragon state and world changes using SaveGame objects.</p>
+<ul class='task-list'>
+  <li>Create SaveGame blueprint and define storage variables</li>
+  <li>Implement logic to create or load SaveGame at game start</li>
+  <li>Write functions to read/write data to SaveGame</li>
+  <li>Integrate saving/loading with inventory, missions, dragon and world</li>
+  <li>Provide UI for save slots and player choice</li>
+</ul>
+</section>
+<section id='ui' class='system-section'>
+<h2>UI &amp; Interaction</h2>
+<p>Design and implement all interfaces: HUD, menus, inventory, dialogue, skill tree and dragon status.</p>
+<ul class='task-list'>
+  <li>Design HUD elements (health, stamina, bond meters)</li>
+  <li>Develop inventory UI and interaction panels</li>
+  <li>Create quest log and mission tracking UI</li>
+  <li>Implement dialogue interface with branching choices</li>
+  <li>Build skill tree and ability selection UI</li>
+  <li>Add dragon status and command interface</li>
+</ul>
+</section>
+<section id='openworld' class='system-section'>
+<h2>Open World &amp; Streaming</h2>
+<p>Construct an open world environment and manage it with world partition, level streaming and performance optimisation.</p>
+<ul class='task-list'>
+  <li>Design world layout and identify major zones</li>
+  <li>Set up world partition or level streaming</li>
+  <li>Implement dynamic day/night and weather system</li>
+  <li>Add environmental interaction and destructible objects</li>
+  <li>Optimise LODs, culling and performance</li>
+</ul>
+</section>
+<section id='audio' class='system-section'>
+<h2>Audio &amp; VFX</h2>
+<p>Create immersive audio and visual effects: ambient sounds, voice overs, particle effects and dynamic music.</p>
+<ul class='task-list'>
+  <li>Compose or source ambient soundscapes</li>
+  <li>Implement sound cues and volumes for abilities and events</li>
+  <li>Create particle effects for fire, ash, magic and dragon abilities</li>
+  <li>Integrate dynamic music system that responds to gameplay</li>
+  <li>Optimise audio and VFX performance</li>
+</ul>
+</section>
+<section id='vehicles' class='system-section'>
+<h2>Driveable Vehicles</h2>
+<p>Implement drivable vehicles such as cars or carts using Unreal’s vehicle systems and ensure co‑op replication.</p>
+<ul class='task-list'>
+  <li>Enable vehicle physics or Chaos Vehicles plugin</li>
+  <li>Create base vehicle class with physics, steering and throttle control</li>
+  <li>Implement driving input mappings (accelerate, brake, steering)</li>
+  <li>Design multiple vehicle types with different stats</li>
+  <li>Integrate vehicles into the open world (roads, spawn points)</li>
+  <li>Implement network replication for vehicle movement and state</li>
+  <li>Add vehicle damage and repair mechanics</li>
+  <li>Provide UI elements (speedometer, fuel gauge)</li>
+</ul>
+</section>
+<section id='weapons' class='system-section'>
+<h2>Weapon System</h2>
+<p>Develop a firearm system with guns, ammunition, attachments and combat mechanics.</p>
+<ul class='task-list'>
+  <li>Define base weapon classes (pistol, rifle, shotgun)</li>
+  <li>Implement shooting mechanics (hitscan/projectile, spread, recoil)</li>
+  <li>Add ammunition system and reload mechanics</li>
+  <li>Create attachments and weapon customisation</li>
+  <li>Integrate weapons into inventory and equipping system</li>
+  <li>Add visual and audio effects (muzzle flash, gunshot sounds)</li>
+  <li>Implement network replication for weapon state and firing events</li>
+</ul>
+</section>
+<section id='crafting' class='system-section'>
+<h2>Crafting &amp; Shelter Construction</h2>
+<p>Allow players to gather resources, craft items and build shelters for survival.</p>
+<ul class='task-list'>
+  <li>Design resource types and harvesting mechanics</li>
+  <li>Implement crafting system with recipes and output items</li>
+  <li>Create crafting UI and feedback</li>
+  <li>Design buildable shelter structures with modular pieces</li>
+  <li>Implement placement system for structures</li>
+  <li>Add upgrade and repair mechanics for shelters</li>
+  <li>Integrate shelters and crafted items into Save/Load system</li>
+  <li>Tie advanced recipes and shelter upgrades into the skill tree</li>
+</ul>
+</section>
+</main>
+<footer>
+  <p>© Bond of Ash – Technical Plan</p>
+</footer>
+</body>
+</html>
